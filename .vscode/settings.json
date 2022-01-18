@@ -5,5 +5,5 @@
         "delay.h": "c",
         "interrupt.h": "c"
     },
-    "cmake.cmakePath": "${workspaceFolder}/tools/cmake-3.22.0-rc1-windows-x86_64/bin/cmake.exe"
+    "cmake.cmakePath": "${env:%USERPROFILE%}/Downloads/cmake-3.22.0-rc1-windows-x86_64/bin/cmake.exe"
 }
