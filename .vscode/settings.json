@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "mylib.h": "c",
+        "io.h": "c",
+        "delay.h": "c",
+        "interrupt.h": "c"
+    },
+    "cmake.cmakePath": "${workspaceFolder}/tools/cmake-3.22.0-rc1-windows-x86_64/bin/cmake.exe"
+}
