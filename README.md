@@ -9,7 +9,7 @@ Modified from [mkleemann/cmake-avr: cmake toolchain for AVR](https://github.com/
 - [x] add `#define` for atmega328p
 - [x] fix include paths for future use (portable)
 - [ ] run `AVR_UPLOADTOOL` and proper settings directly inside `CMakeLists.txt` instead of `run.cmd`
-- [ ] populate `avrhelper` with common code
+- [ ] populate `avr_helper` with common code
   - [ ] My AVR seems does not work with normal mode timer
 
 ### Tools

@@ -146,7 +146,7 @@ endif(NOT ((CMAKE_BUILD_TYPE MATCHES Release) OR
 # target file name add-on
 ##########################################################################
 if(WITH_MCU)
-    set(MCU_TYPE_FOR_FILENAME "-${AVR_MCU}")
+    set(MCU_TYPE_FOR_FILENAME "_${AVR_MCU}")
 else(WITH_MCU)
     set(MCU_TYPE_FOR_FILENAME "")
 endif(WITH_MCU)

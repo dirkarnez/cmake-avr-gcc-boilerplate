@@ -9,8 +9,10 @@
 # Matthias Kleemann
 ##########################################################################
 
+set(APP_NAME "$ENV{PROGRAM_NAME}")
+
 add_avr_executable(
-   toggle-led
+   ${APP_NAME}
    main.c
 )
 
@@ -20,5 +22,5 @@ add_avr_executable(
 find_library(C_LIB c)
 message(STATUS "avr-libc: ${C_LIB}")
 
-avr_target_link_libraries(toggle-led avrhelper ${C_LIB})
+avr_target_link_libraries(${APP_NAME} avr_helper ${C_LIB})
 

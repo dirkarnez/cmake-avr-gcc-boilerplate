@@ -11,12 +11,17 @@
 
 cmake_minimum_required(VERSION 3.18)
 
+if(NOT DEFINED ENV{PROGRAM_NAME})
+  message(FATAL_ERROR "Please set PROGRAM_NAME in your environment.")
+endif()
+
 ### TOOLCHAIN SETUP AREA #################################################
 # Set any variables used in the toolchain prior project() call. In that
 # case they are already set and used.
 ##########################################################################
 
-set(AVR_SIZE_ARGS "toggle-led-atmega328p.elf")
+set(AVR_SIZE_ARGS "$ENV{PROGRAM_NAME}_atmega328p.elf")
+
 ##########################################################################
 # tools to beused for programming the AVR
 ##########################################################################
@@ -50,7 +55,7 @@ set(AVR_L_FUSE 0x0)
 ##########################################################################
 # name your project
 ##########################################################################
-project(AVR-EXAMPLE)
+project($ENV{PROGRAM_NAME})
 
 ##########################################################################
 # status messages
@@ -62,6 +67,7 @@ message(STATUS "Current uploadtool options are: ${AVR_UPLOADTOOL_OPTIONS}")
 message(STATUS "Current MCU is set to: ${AVR_MCU}")
 message(STATUS "Current H_FUSE is set to: ${AVR_H_FUSE}")
 message(STATUS "Current L_FUSE is set to: ${AVR_L_FUSE}")
+message(STATUS "Current PROGRAM_NAME is set to: $ENV{PROGRAM_NAME}")
 
 ##########################################################################
 # set build type
@@ -146,12 +152,12 @@ add_definitions("-std=gnu99")
 ##########################################################################
 # include search paths
 ##########################################################################
-include_directories(${AVR-EXAMPLE_SOURCE_DIR}/avrhelper)
+include_directories(avr_helper)
 
 ##########################################################################
 # building library and application in their subdirectories
 ##########################################################################
-add_subdirectory(avrhelper)
+add_subdirectory(avr_helper)
 add_subdirectory(app)
 
 

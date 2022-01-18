@@ -3,11 +3,11 @@
         {
             "name": "avr",
             "includePath": [
-                "${env:%USERPROFILE%}/Downloads/avr-gcc-11.1.0-x64-windows/avr/include",
-                "${workspaceFolder}/avrhelper"
+                "${env:USERPROFILE}/Downloads/avr-gcc-11.1.0-x64-windows/avr/include",
+                "${workspaceFolder}/avr_helper"
             ],
             "defines": ["__AVR_ATmega328P__", "_AVR_CPU_NAME_=ATmega328P", "F_CPU=16000000"],
-            "compilerPath": "${env:%USERPROFILE%}/Downloads/avr-gcc-11.1.0-x64-windows/bin/avr-gcc.exe",
+            "compilerPath": "${env:USERPROFILE}/Downloads/avr-gcc-11.1.0-x64-windows/bin/avr-gcc.exe",
             "cStandard": "c99",
             "cppStandard": "c++98"
         }

@@ -10,7 +10,7 @@
 ##########################################################################
 
 add_avr_library(
-   avrhelper
+   avr_helper
    mylib.c 
    mylib.h
 )
