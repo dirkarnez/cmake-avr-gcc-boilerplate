@@ -5,6 +5,12 @@ Modified from [mkleemann/cmake-avr: cmake toolchain for AVR](https://github.com/
 ### Intended for
 - atmega328p
 
+### Prerequisites
+- [arduino-1.8.19-windows.zip](https://downloads.arduino.cc/arduino-1.8.19-windows.zip)
+- [avr-gcc-11.1.0-x64-windows.zip](https://blog.zakkemble.net/wp-content/uploads/downloads/2021/04/avr-gcc-11.1.0-x64-windows.zip)
+  - From [AVR-GCC 11.1.0 for Windows 32 and 64 bit – Zak's Electronics Blog ~*](https://blog.zakkemble.net/avr-gcc-builds/)
+- [cmake-3.22.0-rc1-windows-x86_64.zip](https://github.com/Kitware/CMake/releases/download/v3.22.0-rc1/cmake-3.22.0-rc1-windows-x86_64.zip)
+
 ### TODOs
 - [x] add `#define` for atmega328p
 - [x] fix include paths for future use (portable)
@@ -13,8 +19,7 @@ Modified from [mkleemann/cmake-avr: cmake toolchain for AVR](https://github.com/
   - [ ] My AVR seems does not work with normal mode timer
 
 ### Tools
-- [AVR-GCC 11.1.0 for Windows 32 and 64 bit – Zak's Electronics Blog ~*](https://blog.zakkemble.net/avr-gcc-builds/)
-  - used in this boilerplate
+
 - [AVRDUDESS – A GUI for AVRDUDE – Zak's Electronics Blog ~*](https://blog.zakkemble.net/avrdudess-a-gui-for-avrdude/)
   - as a reference
 
